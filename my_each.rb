@@ -1,3 +1,10 @@
-def my_each # put argument(s) here
-  # code here
+def my_each(arr)
+  i = 0
+  x = Array.new
+  while i < arr.length
+    yield(arr[i])
+    x << arr[i]
+    i += 1
+  end
+  return x
 end
